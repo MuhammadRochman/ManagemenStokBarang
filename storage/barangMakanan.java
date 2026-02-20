@@ -13,8 +13,8 @@ public class barangMakanan extends Barang{
     }
 
     @Override
-    public String toString() {
-        return String.format("%-15s | %-10s | %-5d | Exp: %-10s", getNama(), getKode(), getStok(), getExp());
+    public String getInfoTambahan(){
+        return "Exp: " + exp;
     }
     
 }
