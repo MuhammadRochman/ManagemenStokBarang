@@ -1,10 +1,10 @@
 package storage;
 
 public class barangElektronik extends Barang {
-    private String garansi; 
+    private String garansi;
 
     public barangElektronik(String nama, String kode, int stok, String garansi) {
-        super(nama, kode, stok); 
+        super(nama, kode, stok);
         this.garansi = garansi;
     }
 
@@ -12,16 +12,9 @@ public class barangElektronik extends Barang {
         return garansi;
     }
 
-    public boolean adaGaransi(
-        return garansi > 0;
-    )
-
-    public String statusGaransi() {
-        return adaGaransi() ? "Aktif" : "Habis";
-    }
-
     @Override
-    public void getInfoTambahan() {
-        System.out.println("Garansi: " + garansi);
+    public String toString() {
+        return String.format("%-15s | %-10s | %-5d | Garansi: %s",
+                getNama(), getKode(), getStok(), garansi);
     }
 }
